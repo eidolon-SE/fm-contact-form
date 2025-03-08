@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Karla Variable";
+  src: url("../assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+@font-face{
+  font-family: "Karla Italic Variable";
+  src: url("../assets/fonts/Karla-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+  --green: hsl(169, 82%, 27%);
+  --light-green: hsl(148, 38%, 91%);
+  --dark-green: #053f36;
+  --black: hsl(187, 24%, 22%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(186, 15%, 59%);
+  --red: hsl(0, 66%, 54%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla Variable", sans-serif;
+}
+
+body {
+  color: var(--black);
+}

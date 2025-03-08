@@ -1,0 +1,117 @@
+// encapsulates field label, input widget(s) and error messages
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media screen and (max-width: 960px) {
+    grid-column: 1 / 3;
+  }
+  
+  &__label {
+    display: flex;
+    gap: 0.5rem;
+
+    &--required::after {
+      content: "*";
+      color: var(--green);
+    }
+  }
+
+  &__error-message {
+    color: var(--red);
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__input-box {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey);
+    font-size: 1.125rem;
+    cursor: pointer;
+
+    &:hover, &:focus, &:has(input:checked) {
+      border: 1px solid var(--green);
+      outline: none;
+    }
+
+    &:has(input:checked) {
+      background-color: var(--light-green);
+    }
+
+    &--invalid {
+      border-color: var(--red);
+    }
+  }
+
+  &__query-inputs {
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+    }
+  }
+
+  &__hidden-checkbox, &__hidden-radio {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+  }
+
+  &__checkbox-input {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--grey);
+    border-radius: 2px;
+  }
+
+  &__checkbox-label, &__radio-label {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+
+  &__radio-input {
+    display: block;
+    height: 24px;
+    width: 24px;
+    border: 1px solid var(--grey);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__hidden-checkbox:checked ~ &__checkbox-input {
+    background-image: url("./assets/images/icon-checkbox-check.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+  }
+
+  &__hidden-radio:checked ~ &__radio-input {
+    background-image: url("./assets/images/icon-radio-selected.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+  }
+
+  &__textarea {
+    resize: none;
+    height: 7rem;
+  }
+
+  &--large {
+    grid-column: 1 / 3;
+  }
+}
