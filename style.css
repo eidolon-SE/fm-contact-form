@@ -27,6 +27,10 @@ body {
   color: var(--black);
 }
 
+.attribution {
+  text-align: center;
+}
+
 .form-input {
   display: flex;
   flex-direction: column;
