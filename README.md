@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github] (https://github.com/eidolon-SE/fm-contact-form)
+- Solution URL: [Github](https://github.com/eidolon-SE/fm-contact-form)
 - Live Site URL: [Github Pages](https://eidolon-se.github.io/fm-contact-form/)
 
 ## My process
