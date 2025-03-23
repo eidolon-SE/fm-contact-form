@@ -12,93 +12,95 @@
     <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
-    <div class="contact-form">
-        <div class="contact-form__inner">
-            <header class="contact-form__title">Contact Us</header>
-            <form id="contact-form" novalidate onsubmit="return false;">
-                <div class="contact-form__content">
-                    <div class="form-input">
-                        <label for="first-name" class="form-input__label form-input__label--required">First Name</label>
-                        <input name="first-name" id="first-name" class="form-input__input-box" required>
-                        <div class="form-input__error-message" id="em-fname-req">
-                            This field is required
+    <main>
+        <div class="contact-form">
+            <div class="contact-form__inner">
+                <h1 class="contact-form__title">Contact Us</h1>
+                <form id="contact-form" novalidate onsubmit="return false;">
+                    <div class="contact-form__content">
+                        <div class="form-input">
+                            <label for="first-name" class="form-input__label form-input__label--required">First Name</label>
+                            <input name="first-name" id="first-name" class="form-input__input-box" required>
+                            <div class="form-input__error-message" id="em-fname-req">
+                                This field is required
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-input">
-                        <label for="last-name" class="form-input__label form-input__label--required">Last Name</label>
-                        <input name="last-name" id="last-name" class="form-input__input-box" required>
-                        <div class="form-input__error-message" id="em-lname-req">
-                            This field is required
+                        <div class="form-input">
+                            <label for="last-name" class="form-input__label form-input__label--required">Last Name</label>
+                            <input name="last-name" id="last-name" class="form-input__input-box" required>
+                            <div class="form-input__error-message" id="em-lname-req">
+                                This field is required
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-input form-input--large">
-                        <label for="email" class="form-input__label form-input__label--required">Email Address</label>
-                        <input type="email" name="email" id="email" class="form-input__input-box" required>
-                        <div class="form-input__error-message" id="em-email-invalid">
-                            Please enter a valid email address
+                        <div class="form-input form-input--large">
+                            <label for="email" class="form-input__label form-input__label--required">Email Address</label>
+                            <input type="email" name="email" id="email" class="form-input__input-box" required>
+                            <div class="form-input__error-message" id="em-email-invalid">
+                                Please enter a valid email address
+                            </div>
+                            <div class="form-input__error-message" id="em-email-req">
+                                This field is required
+                            </div>
                         </div>
-                        <div class="form-input__error-message" id="em-email-req">
-                            This field is required
-                        </div>
-                    </div>
 
-                    <div class="form-input form-input--large">
-                    <span class="form-input__label form-input__label--required">Query Type</span>
-                        <div class="form-input__query-inputs">
-                            <label class="form-input__input-box form-input__radio-label" for="general" id="general-label" tabindex="0">
-                                <input type="radio" name="query-type" value="general" id="general" class="form-input__hidden-radio" required tabindex="-1">
-                                <span class="form-input__radio-input"></span>
-                                <span>General Enquiry</span>
+                        <div class="form-input form-input--large">
+                        <span class="form-input__label form-input__label--required">Query Type</span>
+                            <div class="form-input__query-inputs">
+                                <label class="form-input__input-box form-input__radio-label" for="general" id="general-label" tabindex="0">
+                                    <input type="radio" name="query-type" value="general" id="general" class="form-input__hidden-radio" required tabindex="-1">
+                                    <span class="form-input__radio-input"></span>
+                                    <span>General Enquiry</span>
+                                </label>
+                                <label class="form-input__input-box form-input__radio-label" for="support" id="support-label" tabindex="0">
+                                    <input type="radio" name="query-type" value="support" id="support" class="form-input__hidden-radio" required tabindex="-1">
+                                    <span class="form-input__radio-input"></span>
+                                    <span>Support Request</span>
+                                </label>
+                            </div>
+                            <div class="form-input__error-message" id="em-qtype-req">
+                                Please select a query type
+                            </div>
+                        </div>
+
+                        <div class="form-input form-input--large">
+                            <label for="message" class="form-input__label form-input__label--required">Message</label>
+                            <textarea name="message" id="message" class="form-input__input-box form-input__textarea" required></textarea>
+                            <div class="form-input__error-message" id="em-message-req">
+                                This field is required
+                            </div>
+                        </div>
+
+                        <div class="form-input form-input--large">
+                            <label for="consent" class="form-input__checkbox-label" id="consent-label" tabindex="0">
+                                <input type="checkbox" id="consent" name="consent" class="form-input__hidden-checkbox" required tabindex="-1">
+                                <span class="form-input__checkbox-input"></span>
+                                <span class="form-input__label form-input__label--required">I consent to being contacted by the team</span>
                             </label>
-                            <label class="form-input__input-box form-input__radio-label" for="support" id="support-label" tabindex="0">
-                                <input type="radio" name="query-type" value="support" id="support" class="form-input__hidden-radio" required tabindex="-1">
-                                <span class="form-input__radio-input"></span>
-                                <span>Support Request</span>
-                            </label>
+                            <div class="form-input__error-message" id="em-consent-req">
+                                To submit this form, please consent to being contacted
+                            </div>
                         </div>
-                        <div class="form-input__error-message" id="em-qtype-req">
-                            Please select a query type
-                        </div>
-                    </div>
+                        
+                        <input type="submit" class="contact-form__submit-button" value="Submit" id="submit-button">
 
-                    <div class="form-input form-input--large">
-                        <label for="message" class="form-input__label form-input__label--required">Message</label>
-                        <textarea name="message" id="message" class="form-input__input-box form-input__textarea" required></textarea>
-                        <div class="form-input__error-message" id="em-message-req">
-                            This field is required
+                        <div class="contact-form__success-message" id="success">
+                            <div class="contact-form__success-header">
+                                Message Sent!
+                            </div>
+                            <div>
+                                Thanks for completing the form. We'll be in touch soon!
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-input form-input--large">
-                        <label for="consent" class="form-input__checkbox-label" id="consent-label" tabindex="0">
-                            <input type="checkbox" id="consent" name="consent" class="form-input__hidden-checkbox" required tabindex="-1">
-                            <span class="form-input__checkbox-input"></span>
-                            <span class="form-input__label form-input__label--required">I consent to being contacted by the team</span>
-                        </label>
-                        <div class="form-input__error-message" id="em-consent-req">
-                            To submit this form, please consent to being contacted
-                        </div>
-                    </div>
-                    
-                    <input type="submit" class="contact-form__submit-button" value="Submit" id="submit-button">
-
-                    <div class="contact-form__success-message" id="success">
-                        <div class="contact-form__success-header">
-                            Message Sent!
-                        </div>
-                        <div>
-                            Thanks for completing the form. We'll be in touch soon!
-                        </div>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/eidolon-SE">Samuel P.</a>
-    </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/eidolon-SE">Samuel P.</a>
+        </div>
+    </main>
 </body>
 </html>
